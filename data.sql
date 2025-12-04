@@ -3,6 +3,8 @@
 -- Truncate and reload all data for easy data modifications
 -- ============================================================
 
+USE `payroll_system`;
+
 SET FOREIGN_KEY_CHECKS = 0;
 
 -- Truncate tables in reverse dependency order
