@@ -127,7 +127,9 @@ CREATE TABLE `TechSalesByCategory`(
     CONSTRAINT `FK_TechSales_Store` FOREIGN KEY (`StoreID`)
         REFERENCES `Store`(`StoreID`),
     CONSTRAINT `FK_TechSales_Employee` FOREIGN KEY (`EmployeeID`)
-        REFERENCES `Employee`(`EmployeeID`)
+        REFERENCES `Employee`(`EmployeeID`),
+    CONSTRAINT `FK_TechSales_Category` FOREIGN KEY (`CategoryCode`)
+          REFERENCES `Category`(`CategoryCode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
@@ -153,7 +155,9 @@ CREATE TABLE `WriterSalesByCategory`(
     CONSTRAINT `FK_WriterSales_Store` FOREIGN KEY (`StoreID`)
         REFERENCES `Store`(`StoreID`),
     CONSTRAINT `FK_WriterSales_Employee` FOREIGN KEY (`EmployeeID`)
-        REFERENCES `Employee`(`EmployeeID`)
+        REFERENCES `Employee`(`EmployeeID`),
+    CONSTRAINT `FK_WriterSales_Category` FOREIGN KEY (`CategoryCode`)
+            REFERENCES `Category`(`CategoryCode`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_ci;
 
 
